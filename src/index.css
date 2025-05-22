@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply font-inter;
+  }
+  :root {
+    --fallback-bc: #1E88E5;
+    /* default dark grey */
+  }
+
+  [data-theme='light'] {
+    --fallback-bc: #1E88E5;
+    --fallback-b3:#1E88E5;
+
+    --bc: #FFB300;
+    --b3:#1E88E5;
+  
+    /* Custom base content color for light theme */
+  }
+
+  [data-theme='dark'] {
+    --fallback-bc: #FFB300;
+    --fallback-b3: #FFB300;
+    --bc: #FFB300;
+    --b3: #FFB300;
+    /* Custom base content color for dark theme */
+  }
+}
