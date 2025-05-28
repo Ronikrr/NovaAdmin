@@ -3,15 +3,17 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Header from './Header';
 import Footer from './Footer';
+import { useState } from "react";
 
 const Layout = ({ theme, setTheme }) => {
+    const [collapse, setCollapse] = useState(false);
     return (
         <div className="flex min-h-screen overflow-hidden bg-base-100 text-base-content-900 ">
             {/* Sidebar */}
-            <Sidebar />
+            <Sidebar collapse={collapse} setCollapse={setCollapse} />
 
             {/* Main Content Section */}
-            <div className="flex flex-col flex-1">
+            <div className={`flex flex-col flex-1  ${collapse ? "lg:ml-[150px] transition-all duration-1000 ease-in-out" : "lg:ml-[300px] transition-all duration-1000 ease-in-out"}`}>
                 {/* Header */}
                 <Header theme={theme} setTheme={setTheme} />
 

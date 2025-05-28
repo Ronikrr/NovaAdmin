@@ -4,30 +4,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   body {
     @apply font-inter;
   }
+/* Default fallback (before theme is applied) */
   :root {
     --fallback-bc: #1E88E5;
-    /* default dark grey */
-  }
-
+    --fallback-b3: #1E88E5;
+      --fallback-b1: #ffffff;
+      --fallback-b2: #f5f5f5;
+    
+      --bc: var(--fallback-bc);
+      --b3: var(--fallback-b3);
+      --b1: var(--fallback-b1);
+      --b2: var(--fallback-b2);
+    }
+       
+    
+        /* Light Theme */
   [data-theme='light'] {
+    --bc: #2c2c2c;
+      /* Base content (text/icons) */
+      --b1: #ffffff;
+      /* Base background */
+      --b2: #f9f9f9;
+      /* Secondary surface (cards, inputs) */
+      --b3: #1E88E5;
+      /* Accent surface (buttons, highlights) */
     --fallback-bc: #1E88E5;
-    --fallback-b3:#1E88E5;
-
-    --bc: #FFB300;
-    --b3:#1E88E5;
-  
-    /* Custom base content color for light theme */
+    /* Fallback base content */
+      --fallback-b1: #ffffff;
+      /* Fallback base background */
+      --fallback-b2: #f9f9f9;
+      /* Fallback secondary surface */
+      --fallback-b3: #282828;
+      /* Fallback accent */
   }
 
-  [data-theme='dark'] {
-    --fallback-bc: #FFB300;
-    --fallback-b3: #FFB300;
+                                /* Dark Theme */
+        [data-theme='dark'] {
     --bc: #FFB300;
-    --b3: #FFB300;
-    /* Custom base content color for dark theme */
+      --b1: #121212;
+        --b2: #2c2c2c;
+      --b3: #FFB300;
+    --fallback-bc: #FFB300;
+      --fallback-b1: #121212;
+      /* Much better than #000 — gives a soft dark */
+      --fallback-b2: #1e1e1e;
+      --fallback-b3: #f2f2f2;
   }
 }
