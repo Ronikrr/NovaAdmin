@@ -7,7 +7,7 @@ const Header = ({ theme, setTheme }) => {
     };
 
     return (
-        <div className="px-4 border-b shadow-md navbar bg-base-100 text-base-content">
+        <div className="z-10 px-4 border-b shadow-md navbar bg-base-100 text-base-content">
             {/* Left Section: Search */}
             <div className="gap-2 navbar-start">
                 <button className="btn btn-ghost btn-circle">
@@ -61,7 +61,7 @@ const Header = ({ theme, setTheme }) => {
                     </svg>
                 </label>
 
-                <button className="btn btn-ghost btn-circle">
+                <button className="btn btn-ghost btn-circle hover:text-base-100">
                     <div className="indicator">
                         <Bell className="text-current" />
                         <span className="badge badge-xs badge-primary indicator-item"></span>
@@ -77,8 +77,8 @@ const Header = ({ theme, setTheme }) => {
                         tabIndex={0}
                         className="menu dropdown-content bg-base-100 text-base-content rounded-box shadow-md w-52 z-[1] mt-2 p-2"
                     >
-                        <li><a><UserPen className="mr-2" /> Profile</a></li>
-                        <li><a><LogOut className="mr-2" /> Logout</a></li>
+                        <li><a className='hover:text-base-100' ><UserPen className="mr-2 " /> Profile</a></li>
+                        <li><a className='hover:text-base-100' ><LogOut className="mr-2 " /> Logout</a></li>
                     </ul>
                 </div>
             </div>

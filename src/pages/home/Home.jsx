@@ -1,7 +1,9 @@
-import { Banknote, CircleCheck } from "lucide-react";
+import { Banknote, CircleCheck, EllipsisVertical, LogOut, UserPen } from "lucide-react";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line
 } from "recharts";
+import Table from "../../components/home/table";
+import Grah from "../../components/home/Grah";
 
 const Home = () => {
   // Weekly website views
@@ -27,40 +29,7 @@ const Home = () => {
     { name: 'Nov', sales: 220 },
     { name: 'Dec', sales: 500 },
   ];
-  const tabledata = [
-    {
-      id: 1,
-      src: "https://img.daisyui.com/images/profile/demo/2@94.webp",
-      name: "Hart Hagerty",
-      members: [
-        {
-          id: 1,
-          image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
-        }, {
-          id: 1,
-          image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
-        }
-      ],
-      buget: "14000",
-      completion: "60"
-    },
-    {
-      id: 2,
-      src: "https://img.daisyui.com/images/profile/demo/2@94.webp",
-      name: "agvbhnjm",
-      members: [
-        {
-          id: 1,
-          image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
-        }, {
-          id: 1,
-          image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
-        }
-      ],
-      buget: "no",
-      completion: "10"
-    },
-  ]
+
 
   // Dashboard metrics
   const stats = [
@@ -125,55 +94,8 @@ const Home = () => {
       </div>
 
       {/* Charts Section */}
-      <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-        {/* Bar Chart */}
-        <div className="w-full rounded-lg shadow bg-base-100">
-          <div className="w-full h-56 p-4 border-b">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={viewData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="day" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="views" fill="#4CAF50" radius={[10, 10, 0, 0]} barSize={10} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="p-4 mt-4">
-            <h3 className="font-semibold text-base-300">Website Views</h3>
-            <p className="text-sm text-base-content/70">Last Campaign Performance</p>
-            <div className="flex items-center gap-1 mt-2 text-xs text-base-content/60">
-              <span className="inline-block w-3 h-3 bg-gray-400 rounded-full"></span>
-              campaign sent 2 days ago
-            </div>
-          </div>
-        </div>
 
-        {/* Line Charts */}
-        {["#007BFF", "#398e3d"].map((color, index) => (
-          <div className="w-full rounded-lg shadow bg-base-100" key={index}>
-            <div className="w-full p-4 border-b">
-              <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={salesData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis domain={[0, 600]} />
-                  <Tooltip />
-                  <Line type="monotone" dataKey="sales" stroke={color} strokeWidth={3} dot />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="p-4 mt-4">
-              <h3 className="font-semibold text-base-300">Daily Sales</h3>
-              <p className="text-sm text-base-content/70">15% increase in todays sales</p>
-              <div className="flex items-center gap-1 mt-2 text-xs text-base-content/60">
-                <span className="inline-block w-3 h-3 bg-gray-400 rounded-full"></span>
-                updated 4 min ago
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Grah />
 
       {/* Projects Section */}
       <div className="grid grid-cols-1 gap-6 mb-4 xl:grid-cols-3 mt-7">
@@ -186,74 +108,35 @@ const Home = () => {
                 <strong>30 done</strong> this month
               </p>
             </div>
+            <div className="dropdown dropdown-hover dropdown-end">
+              <div tabIndex={0} role="button" className="text-base-300">
+                <EllipsisVertical />
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu dropdown-content bg-base-100 rounded-box shadow-md w-52 z-[1] mt-2 p-2"
+              >
+                <li><a className='text-base-300' >Action</a></li>
+                <li><a className='text-base-300'> Another action</a></li>
+                <li><a className='text-base-300'>Something else here</a></li>
+              </ul>
+            </div>
           </div>
-          <div className="overflow-x-auto">
-            <table className="table">
-              {/* head */}
-              <thead>
-                <tr className="capitalize text-base-300" >
 
-                  <th>companies</th>
-                  <th>members</th>
-                  <th>budget</th>
-                  <th>completion</th>
-                </tr>
-              </thead>
-              <tbody>
+          <Table />
+        </div>
+        <div className="w-full rounded-lg shadow-md bg-base-100">
+          <div className="relative flex items-center justify-between p-6">
+            <div>
+              <h6 className="font-bold leading-relaxed text-base-300">Order Overview</h6>
+              <p className="flex items-center gap-1 text-[14px]">
+                <CircleCheck className="w-[20px] h-[20px] text-base-400" />
+                <strong>30 done</strong> this month
+              </p>
+            </div>
 
-
-                {tabledata.map((data, index) => (
-
-                  <>
-                    <tr key={index}>
-                      <td>
-                        <div className="flex items-center flex-1 gap-4">
-                          <div className="avatar">
-                            <div className="w-12 h-12 mask mask-squircle">
-                              <img
-                                src={data.src}
-                                alt={data.name} />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-bold text-base-300">{data.name}</div>
-
-                          </div>
-                        </div>
-                      </td>
-                      <td className="">
-                        <div className="flex flex-row items-start justify-center w-full h-full text-base-300">
-
-                          {data.members.map((meber) => (
-                            <div className="w-[20px] h-[20px] bg-gray-300 rounded-full ring-2 ring-white overflow-hidden" key={meber.id} >
-                              <img
-                                src={meber.image_member}
-                                alt={meber.img} />
-                            </div>
-                          ))}
-                        </div>
-
-                      </td>
-                      <td className="text-base-300" >${data.buget}</td>
-                      <td>
-                        <p className="text-base-300" >{data.completion}%</p>
-                        <progress
-                          className="progress bg-base-200 progress-primary"
-                          value={data.completion}
-                          max="100"
-                        ></progress>
-                      </td>
-
-                    </tr>
-                  </>
-                ))}
-
-              </tbody>
-
-            </table>
           </div>
         </div>
-        <div className="w-full max-w-sm rounded-lg shadow bg-base-100"></div>
       </div>
     </div>
   );
