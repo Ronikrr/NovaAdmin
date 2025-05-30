@@ -231,7 +231,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
 
         {/* Collapse Button */}
         <div
-          className={`h-[80px] flex items-center px-4 border-t border-secondary`}
+          className={`h-[80px] flex items-center px-4 border-t border-base-100`}
         >
           <button
             onClick={handleCollapseClick}
