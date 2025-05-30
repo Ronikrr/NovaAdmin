@@ -16,7 +16,7 @@ const Header = ({ theme, setTheme }) => {
                 <input
                     type="text"
                     placeholder="Search..."
-                    className="w-full max-w-xs input input-bordered placeholder-base-content"
+                    className="hidden w-full max-w-xs lg:block input input-bordered placeholder-base-content"
                 />
             </div>
 

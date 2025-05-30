@@ -104,7 +104,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
     menuOpentable: false,
   });
 
-  const [showSidebar, setShowSidebar] = useState(false); // for mobile
+  const [showSidebar, setShowSidebar] = useState(false); 
 
   const handleMenuClick = (key) => {
     if (!collapse) {
@@ -135,7 +135,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
       {/* Mobile toggle button */}
       <button
         onClick={() => setShowSidebar(!showSidebar)}
-        className="fixed z-50 p-2 rounded-md shadow-md md:hidden top-4 left-4 bg-base-200"
+        className="fixed z-50 p-2 rounded-md shadow-md md:hidden top-[80px] left-4 bg-base-200"
       >
         <Menu size={24} />
       </button>
@@ -185,7 +185,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
                   collapse
                     ? "flex-col justify-center items-center"
                     : "flex-row items-center"
-                } gap-3 w-full px-3 py-2 rounded-md hover:bg-base-200`}
+                  } gap-3 w-full px-3 py-2 rounded-md hover:bg-base-300  capitalize hover:text-base-300`}
               >
                 <menuItem.icon size={24} className="text-base-100" />
                 {!collapse && (
@@ -195,12 +195,12 @@ const Sidebar = ({ collapse, setCollapse }) => {
 
               {/* Submenu */}
               {collapse ? (
-                <ul className="absolute left-[100%] top-0 z-50 bg-base-300 p-4 rounded-xl shadow-md hidden group-hover:block">
+                <ul className="absolute left-[80%] top-50 z-50 bg-base-content p-4 rounded-xl shadow-md hidden group-hover:block">
                   {menuItem.items.map((subItem, index) => (
                     <li key={index} className="py-1">
                       <a
                         href={subItem.path}
-                        className="flex items-center gap-3 text-sm text-base-100 hover:text-white"
+                        className="flex items-center gap-3 px-3 py-2 text-sm capitalize rounded-lg text-base-100 hover:bg-base-300"
                       >
                         <subItem.icon size={18} />
                         {subItem.label}
@@ -215,7 +215,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
                       <li key={index}>
                         <a
                           href={subItem.path}
-                          className="flex items-center gap-3 text-sm text-base-100"
+                          className="flex items-center gap-3 px-3 py-2 text-sm capitalize rounded-lg text-base-100 hover:bg-base-300"
                         >
                           <subItem.icon size={18} />
                           {subItem.label}

@@ -31,11 +31,57 @@ const tabledata = [
         ],
         buget: "no",
         completion: "10"
+    }, {
+        id: 1,
+        src: "https://img.daisyui.com/images/profile/demo/2@94.webp",
+        name: "Hart Hagerty",
+        members: [
+            {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }, {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }
+        ],
+        buget: "14000",
+        completion: "60"
+    },
+    {
+        id: 2,
+        src: "https://img.daisyui.com/images/profile/demo/2@94.webp",
+        name: "agvbhnjm",
+        members: [
+            {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }, {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }
+        ],
+        buget: "no",
+        completion: "10"
+    }, {
+        id: 2,
+        src: "https://img.daisyui.com/images/profile/demo/2@94.webp",
+        name: "agvbhnjm",
+        members: [
+            {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }, {
+                id: 1,
+                image_member: "https://img.daisyui.com/images/profile/demo/2@94.webp"
+            }
+        ],
+        buget: "no",
+        completion: "10"
     },
 ]
 const Table = () => {
   return (
-      <div className="p-4 overflow-x-auto shadow-md">
+      <div className="p-4 overflow-x-auto ">
           <table className="table">
               {/* head */}
               <thead>
@@ -97,6 +143,15 @@ const Table = () => {
                   ))}
 
               </tbody>
+              <tfoot>
+                  <tr className="capitalize text-base-300" >
+
+                      <th>companies</th>
+                      <th>members</th>
+                      <th>budget</th>
+                      <th>completion</th>
+                  </tr>
+              </tfoot>
 
           </table>
       </div>
