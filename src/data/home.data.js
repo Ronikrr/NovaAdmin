@@ -323,6 +323,11 @@ export const feedbacks = [
     { id: 3, student: 'Noah', comment: 'Loved the hands-on projects.', date: '1 week ago' },
     { id: 4, student: 'Emma', comment: 'Clear explanations and great examples.', date: '8 days ago' },
     { id: 5, student: 'Liam', comment: 'The instructor was very engaging.', date: '10 days ago' },
+    { id: 6, student: 'Noah', comment: 'Loved the hands-on projects.', date: '1 week ago' },
+    { id: 7, student: 'Emma', comment: 'Clear explanations and great examples.', date: '8 days ago' },
+    { id: 8, student: 'Liam', comment: 'The instructor was very engaging.', date: '10 days ago' },
+    { id: 9, student: 'Emma', comment: 'Clear explanations and great examples.', date: '8 days ago' },
+    { id: 10, student: 'Liam', comment: 'The instructor was very engaging.', date: '10 days ago' },
    
 ];
   

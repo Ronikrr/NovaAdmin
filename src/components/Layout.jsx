@@ -14,7 +14,7 @@ const Layout = ({ theme, setTheme }) => {
 
             {/* Main Content Section */}
             <div
-                className={`flex flex-col flex-1 ${collapse ? "lg:ml-[150px]" : "lg:ml-[300px]"} transition-all duration-1000 ease-in-out`}
+                className={`flex flex-col flex-1 ${collapse ? "lg:ml-[150px]" : "md:ml-[300px]"} transition-all duration-1000 ease-in-out`}
             >
                 {/* Header (Fixed) */}
                 <div
