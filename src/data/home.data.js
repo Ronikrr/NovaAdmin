@@ -1,4 +1,4 @@
-import { Banknote, Bell, BookOpen, CreditCard, DollarSign, Lock, Package, PlusCircle, ShoppingCart, Star, Users, Wallet } from "lucide-react";
+import { Banknote, Bell, BookOpen, Activity, Camera, Link, Users, CreditCard, DollarSign, Lock, Package, PlusCircle, ShoppingCart, Star, Wallet } from "lucide-react";
 import phoneImage from '../assets/download.jpg'
 export const timelineData = [
     { icon: Bell, text: "$2400, Design changes", date: "22 DEC 7:20 PM" },
@@ -315,7 +315,7 @@ export const events = [
     { id: 3, title: 'Tailwind CSS Masterclass', date: 'June 19, 2025 - 5 PM EST', speaker: 'Alice Johnson' },
     { id: 4, title: 'Next.js for Beginners', date: 'June 25, 2025 - 4 PM EST', speaker: 'Bob Lee' },
     { id: 5, title: 'GraphQL Fundamentals', date: 'July 2, 2025 - 2 PM EST', speaker: 'Charlie Kim' },
-    
+
 ];
 export const feedbacks = [
     { id: 1, student: 'Aarav', comment: 'Excellent walkthroughs and assignments!', date: '3 days ago' },
@@ -328,7 +328,12 @@ export const feedbacks = [
     { id: 8, student: 'Liam', comment: 'The instructor was very engaging.', date: '10 days ago' },
     { id: 9, student: 'Emma', comment: 'Clear explanations and great examples.', date: '8 days ago' },
     { id: 10, student: 'Liam', comment: 'The instructor was very engaging.', date: '10 days ago' },
-   
+
 ];
-  
-  
+
+export const engagementData = [
+    { title: 'Photo Clicks', value: '1,250', icon: Camera,per:"10%",detail:"last this month" },
+    { title: 'Link Clicks', value: '860', icon: Link,per:"10%",detail:"last this month" },
+    { title: 'Followers', value: '3,490', icon: Users,per:"10%",detail:"last this month" },
+    { title: 'Link Engagements', value: '1,040', icon: Activity,per:"10%",detail:"last this month" },
+];
